@@ -23,8 +23,8 @@ public class Frag_AnnouncementItem extends Fragment{
         rootView = inflater.inflate(R.layout.fragment_announcement_view,container,false);
 
         final String color = getArguments().getString("color");
-        final String letter = getArguments().getString("letter");
         final String title = getArguments().getString("title");
+        final String date = getArguments().getString("date");
         final String desc = getArguments().getString("desc");
 
         actionBar = getActivity().getActionBar();
@@ -33,13 +33,13 @@ public class Frag_AnnouncementItem extends Fragment{
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
 
         final RelativeLayout colors = (RelativeLayout) rootView.findViewById(R.id.subjColor);
-        final TextView letters = (TextView) rootView.findViewById(R.id.subjLetter);
         final TextView titles = (TextView) rootView.findViewById(R.id.subjTitle);
+        final TextView dates = (TextView) rootView.findViewById(R.id.subjDate);
         final TextView descs = (TextView) rootView.findViewById(R.id.subjDesc);
 
-        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.DARKEN);
-        letters.setText(letter);
+        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         titles.setText(title);
+        dates.setText(date);
         descs.setText(desc);
 
         return rootView;

@@ -39,7 +39,7 @@ public class Frag_SubjectView extends Fragment{
         final TextView titles = (TextView) rootView.findViewById(R.id.subjTitle);
         final TextView descs = (TextView) rootView.findViewById(R.id.subjDesc);
 
-        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.DARKEN);
+        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         letters.setText(letter);
         titles.setText(title);
         descs.setText(desc);

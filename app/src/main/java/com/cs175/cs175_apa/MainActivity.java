@@ -92,7 +92,7 @@ public class MainActivity extends Activity {
                 R.string.app_name // nav drawer close - description for accessibility
         ) {
             public void onDrawerClosed(View view) {
-                getActionBar().setTitle((Html.fromHtml("<font color=\"#000000\">" +mTitle+ "</font>")));
+                getActionBar().setTitle((Html.fromHtml("<font color=\"#000000\">" + mTitle + "</font>")));
                 getActionBar().setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
                 // calling onPrepareOptionsMenu() to show action bar icons
                 invalidateOptionsMenu();
@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.new_subj, menu);
         return true;
     }
 
@@ -167,7 +167,7 @@ public class MainActivity extends Activity {
      * Diplaying fragment view for selected nav drawer list item
      * */
     private void displayView(int position) {
-        // update the main content by replacing fragments
+        // update the new_subj content by replacing fragments
         Fragment fragment = null;
         switch (position) {
             case 0:

@@ -56,7 +56,7 @@ public class Activity_EditItem extends Activity{
         final EditText raw = (EditText) findViewById(R.id.rawScore);
         final EditText total = (EditText) findViewById(R.id.totalScore);
 
-        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.DARKEN);
+        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         letters.setText(letter);
         names.setText(name);
 

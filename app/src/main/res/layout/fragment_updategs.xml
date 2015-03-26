@@ -9,37 +9,8 @@
         android:paddingBottom="@dimen/activity_vertical_margin"
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
-        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingTop="80dp"
         android:orientation="vertical">
-
-        <RelativeLayout
-            android:id="@+id/subjColor"
-            android:layout_width="140dp"
-            android:layout_height="140dp"
-            android:background="@drawable/purple"
-            android:layout_gravity="center"
-            android:padding="15dp">
-
-            <TextView
-                android:id="@+id/subjLetter"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="@string/m"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true"
-                android:textSize="70dp"
-                android:textColor="@color/white"/>
-
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/subjTitle"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:layout_weight="1"
-            android:layout_gravity="center_horizontal"
-            android:text="Large Text" />
 
         <TextView
             android:id="@+id/AddNew"

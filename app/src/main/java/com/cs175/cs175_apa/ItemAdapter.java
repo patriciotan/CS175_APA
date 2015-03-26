@@ -49,7 +49,7 @@ public class ItemAdapter extends ArrayAdapter<String>{
             hold = (MyViewHolder) row.getTag();
         }
 
-        hold.color.getBackground().setColorFilter(Color.parseColor(colors[position]), PorterDuff.Mode.DARKEN);
+        hold.color.getBackground().setColorFilter(Color.parseColor(colors[position]), PorterDuff.Mode.SRC_ATOP);
         hold.letter.setText(letters[position]);
         hold.title.setText(titles[position]);
 

@@ -30,9 +30,9 @@
             android:layout_width="fill_parent"
             android:layout_height="@dimen/form_height"
             android:hint="  ID Number"
-            android:inputType="number"
             android:paddingLeft="5dp"
-            android:textSize="@dimen/form_textSize"
+            android:inputType="number"
+            android:textSize="16sp"
             android:background="@drawable/green_button"
             android:layout_weight="1" />
 
@@ -48,7 +48,7 @@
             android:hint=" Password"
             android:paddingLeft="5dp"
             android:inputType="textPassword"
-            android:textSize="@dimen/form_textSize"
+            android:textSize="16sp"
             android:background="@drawable/green_button"
             android:layout_weight="1"/>
 

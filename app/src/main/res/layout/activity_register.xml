@@ -33,7 +33,7 @@
             android:layout_height="@dimen/form_height"
             android:hint="ID Number"
             android:inputType="number"
-            android:textSize="@dimen/form_textSize"
+            android:textSize="16sp"
             android:background="@drawable/green_button"
             android:layout_weight="1"/>
 
@@ -48,7 +48,7 @@
             android:layout_height="@dimen/form_height"
             android:hint="Password"
             android:inputType="textPassword"
-            android:textSize="@dimen/form_textSize"
+            android:textSize="16sp"
             android:background="@drawable/green_button"
             android:layout_weight="1"/>
 
@@ -63,7 +63,7 @@
             android:layout_height="@dimen/form_height"
             android:hint="Complete Name"
             android:inputType="textPersonName"
-            android:textSize="@dimen/form_textSize"
+            android:textSize="16sp"
             android:background="@drawable/green_button"
             android:layout_weight="1" />
 

@@ -1,57 +1,37 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="90dp"
-    android:background="@color/white"
-    android:weightSum="3"
-    android:orientation="horizontal">
+    android:layout_height="wrap_content"
+    android:padding="10dp">
 
     <RelativeLayout
         android:id="@+id/color"
-        android:layout_width="65dp"
-        android:layout_height="65dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="15dp"
-        android:gravity="center_vertical"
-        android:background="@drawable/purple">
+        android:layout_width="75dp"
+        android:layout_height="75dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/circle">
 
         <TextView
             android:id="@+id/letter"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/cs"
-            android:layout_centerVertical="true"
             android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/white"/>
 
     </RelativeLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="10dp"
-        android:paddingRight="10dp"
-        android:layout_weight="3"
-        android:orientation="vertical"
-        android:layout_gravity="center_vertical">
-
         <TextView
-            android:id="@+id/name"
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ASDF"
-            android:singleLine="true"
-            android:textAppearance="?android:attr/textAppearanceMedium"/>
+            android:text="label"
+            android:maxLines="3"
+            android:layout_below="@id/color"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_marginTop="5px"/>
 
-        <TextView
-            android:id="@+id/desc"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="asdfasdfasdf"
-            android:singleLine="true"
-            android:textColor="@color/gray"
-            android:textAppearance="?android:attr/textAppearanceSmall"/>
-
-    </LinearLayout>
-
-</LinearLayout>
+</RelativeLayout>

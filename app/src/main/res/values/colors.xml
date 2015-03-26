@@ -3,6 +3,7 @@
     <color name="white">#ffffff</color>
     <color name="black">#000000</color>
     <color name="req_green">#BEEBC1</color>
+    <color name="grid_bg">#E4F7E5</color>
     <color name="night">#0C090A</color>
     <color name="light_green">#89E08F</color>
     <color name="menu_green">#4ACF53</color>
@@ -20,6 +21,7 @@
     <color name="orange">#FF9933</color>
     <color name="red">#FF3030</color>
     <color name="gray">#cec5c5</color>
+    <color name="dgray">#757472</color>
     <color name="blue">#0066CC</color>
     <color name="aqua">#6699FF</color>
     <color name="green">#339933</color>

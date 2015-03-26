@@ -119,6 +119,12 @@
         <item>@drawable/logout</item>
     </array>
 
+    <string-array name="spinner_array">
+        <item>Seatwork</item>
+        <item>Quiz</item>
+        <item>Assignment</item>
+    </string-array>
+
     <string name="title_activity_grading_system">GradingSystem</string>
     <string name="title_activity_subject_items">SubjectItems</string>
     <string name="title_activity_new_subject">NewSubject</string>

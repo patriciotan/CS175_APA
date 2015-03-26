@@ -7,6 +7,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.LinearLayout;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 
@@ -14,57 +15,77 @@ import android.widget.TextView;
 public class AnnouncementAdapter  extends ArrayAdapter<String> {
     Context context;
     String[] colors;
-    String[] letters;
     String[] titles;
     String[] descs;
-    String date;
-    public AnnouncementAdapter(Context context,String[] colors,String[] letters,String[] titles,String[] descs,String date){
+    String dates;
+    public AnnouncementAdapter(Context context,String[] colors,String[] titles,String[] descs,String dates){
         super(context,R.layout.announcement_layout,R.id.announcementTitle,titles);
         this.context=context;
         this.colors=colors;
-        this.letters=letters;
         this.titles=titles;
         this.descs=descs;
-        this.date=date;
+        this.dates=dates;
     }
 
     public class MyViewHolder {
-        RelativeLayout color;
-        TextView letter;
+        LinearLayout color;
         TextView title;
         TextView desc;
-        TextView date;
+        TextView dates;
 
         public MyViewHolder(View v) {
-            color = (RelativeLayout) v.findViewById(R.id.announcementColor);
-            letter = (TextView) v.findViewById(R.id.announcementLetter);
+            color = (LinearLayout) v.findViewById(R.id.announcementColor);
             title = (TextView) v.findViewById(R.id.announcementTitle);
             desc = (TextView) v.findViewById(R.id.announcementDesc);
-            date = (TextView) v.findViewById(R.id.announcementDate);
+            dates = (TextView) v.findViewById(R.id.announcementDate);
         }
     }
 
-        @Override
-        public View getView(int position, View convertView , ViewGroup parent){
-            View row = convertView;
-            MyViewHolder hold = null;
-            if(row==null){
-                LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-                row = inflater.inflate(R.layout.announcement_layout, parent, false);
-                hold = new MyViewHolder(row);
-                row.setTag(hold);
-            }
-            else{
-                hold = (MyViewHolder) row.getTag();
-            }
+    public View getView(int position, View convertView, ViewGroup parent) {
 
-            hold.color.getBackground().setColorFilter(Color.parseColor(colors[position]), PorterDuff.Mode.DARKEN);
-            hold.letter.setText(letters[position]);
-            hold.title.setText(titles[position]);
-            hold.desc.setText(descs[position]);
-            hold.date.setText(date);
+        LayoutInflater inflater = (LayoutInflater) context
+                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 
-            return row;
+        View gridView;
+
+        if (convertView == null) {
+
+            gridView = new View(context);
+
+            // get layout from announcement_layout.xml
+            gridView = inflater.inflate(R.layout.announcement_layout, null);
+
+            // set color into layout
+            LinearLayout color = (LinearLayout) gridView
+                    .findViewById(R.id.announcementColor);
+            color.getBackground()
+                    .setColorFilter(Color.parseColor(colors[position]), PorterDuff.Mode.SRC_ATOP);
+
+            // set title into textview
+            TextView title = (TextView) gridView
+                    .findViewById(R.id.announcementTitle);
+            title.setText(titles[position]);
+
+            // set date into textview
+            TextView date = (TextView) gridView
+                    .findViewById(R.id.announcementDate);
+            date.setText(dates);
+
+            // set desc into textview
+            TextView desc = (TextView) gridView
+                    .findViewById(R.id.announcementDesc);
+            desc.setText(descs[position]);
+
+        } else {
+            gridView = (View) convertView;
         }
+
+        return gridView;
+    }
+
+    @Override
+    public int getCount() {
+        return titles.length;
+    }
 
 }

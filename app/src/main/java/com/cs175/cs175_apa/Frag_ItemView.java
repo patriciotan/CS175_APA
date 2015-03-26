@@ -36,7 +36,7 @@ public class Frag_ItemView extends Fragment{
         final TextView letters = (TextView) rootView.findViewById(R.id.letter);
         final TextView names = (TextView) rootView.findViewById(R.id.name);
 
-        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.DARKEN);
+        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         letters.setText(letter);
         names.setText(name);
 

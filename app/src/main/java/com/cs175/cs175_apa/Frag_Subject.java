@@ -13,6 +13,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 
 public class Frag_Subject extends Fragment {
@@ -43,12 +44,12 @@ public class Frag_Subject extends Fragment {
         final String[] letters = getResources().getStringArray(R.array.letter);
         final String[] names = res.getStringArray(R.array.name);
         final String[] descs = res.getStringArray(R.array.desc);
-        ListView listView = (ListView) rootview.findViewById(R.id.subjList);
+        GridView gridView = (GridView) rootview.findViewById(R.id.gridView1);
 
         SubjectAdapter adapter = new SubjectAdapter(getActivity(),colors,letters,names,descs);
-        listView.setAdapter(adapter);
+        gridView.setAdapter(adapter);
 
-        listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Bundle b = new Bundle();

@@ -12,6 +12,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
+import android.widget.GridView;
 import android.widget.ListView;
 
 /**
@@ -28,7 +29,7 @@ public class Frag_Announcement extends Fragment {
         actionBar = getActivity().getActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
 
-        ListView list = (ListView)rootView.findViewById(R.id.announcement_list);
+        GridView gridView = (GridView) rootView.findViewById(R.id.gridView1);
         final String[] colors = {
                 "#9933FF",
                 "#FF9933",
@@ -43,32 +44,17 @@ public class Frag_Announcement extends Fragment {
                 "#6699FF",
                 "#339933"
         };
-        final String[] letters = {
-                "A",
-                "D",
-                "D",
-                "F",
-                "I",
-                "C",
-                "C",
-                "C",
-                "C",
-                "P",
-                "P",
-                "C"
-        };
         final String[] titles = getResources().getStringArray(R.array.title);
         final String[] desc = getResources().getStringArray(R.array.announceDesc);
         final String date = getResources().getString(R.string.date);
-        AnnouncementAdapter adapter = new AnnouncementAdapter(getActivity(),colors,letters,titles,desc,date);
-        list.setAdapter(adapter);
+        AnnouncementAdapter adapter = new AnnouncementAdapter(getActivity(),colors,titles,desc,date);
+        gridView.setAdapter(adapter);
 
-        list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+        gridView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Bundle b = new Bundle();
                 b.putString("color",colors[position].toString());
-                b.putString("letter",letters[position].toString());
                 b.putString("title",titles[position].toString());
                 b.putString("desc",desc[position].toString());
                 b.putString("date",date.toString());

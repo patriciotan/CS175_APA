@@ -16,7 +16,7 @@
             android:id="@+id/color"
             android:layout_width="140dp"
             android:layout_height="140dp"
-            android:background="@drawable/purple"
+            android:background="@drawable/circle"
             android:layout_gravity="center"
             android:padding="15dp">
 

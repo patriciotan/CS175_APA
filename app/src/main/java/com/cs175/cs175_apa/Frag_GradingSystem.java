@@ -39,7 +39,7 @@ public class Frag_GradingSystem extends Fragment {
         final TextView letters = (TextView) rootView.findViewById(R.id.subjLetter);
         TextView titles = (TextView) rootView.findViewById(R.id.subjTitle);
 
-        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.DARKEN);
+        colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         letters.setText(letter);
         titles.setText(title);
 
