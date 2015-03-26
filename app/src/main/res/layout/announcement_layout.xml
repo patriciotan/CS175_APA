@@ -1,0 +1,80 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="90dp"
+    android:background="@color/white"
+    android:weightSum="3"
+    android:orientation="horizontal">
+
+    <RelativeLayout
+        android:id="@+id/announcementColor"
+        android:layout_width="65dp"
+        android:layout_height="65dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="15dp"
+        android:gravity="center_vertical"
+        android:background="@drawable/purple">
+
+        <TextView
+            android:id="@+id/announcementLetter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cs"
+            android:layout_centerVertical="true"
+            android:layout_centerHorizontal="true"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_gravity="center_vertical"
+        android:layout_weight="3">
+
+        <TextView
+            android:id="@+id/announcementTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ASDF"
+            android:singleLine="true"
+            android:gravity="top"
+            android:textAppearance="?android:attr/textAppearanceMedium"/>
+
+        <TextView
+            android:id="@+id/announcementDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="asdfasdfasdf"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:layout_below="@id/announcementTitle"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+        <TextView
+            android:id="@+id/announcementDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Mar 15"
+            android:singleLine="true"
+            android:textColor="@color/gray"
+            android:layout_below="@id/announcementDesc"
+            android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/star"/>
+
+    </RelativeLayout>
+
+</LinearLayout>
