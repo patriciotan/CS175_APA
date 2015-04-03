@@ -27,20 +27,6 @@ public class AnnouncementAdapter  extends ArrayAdapter<String> {
         this.dates=dates;
     }
 
-    public class MyViewHolder {
-        LinearLayout color;
-        TextView title;
-        TextView desc;
-        TextView dates;
-
-        public MyViewHolder(View v) {
-            color = (LinearLayout) v.findViewById(R.id.announcementColor);
-            title = (TextView) v.findViewById(R.id.announcementTitle);
-            desc = (TextView) v.findViewById(R.id.announcementDesc);
-            dates = (TextView) v.findViewById(R.id.announcementDate);
-        }
-    }
-
     public View getView(int position, View convertView, ViewGroup parent) {
 
         LayoutInflater inflater = (LayoutInflater) context

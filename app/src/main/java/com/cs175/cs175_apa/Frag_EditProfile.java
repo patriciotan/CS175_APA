@@ -4,8 +4,6 @@ package com.cs175.cs175_apa;
 import android.app.ActionBar;
 import android.app.AlertDialog;
 import android.app.Fragment;
-import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -19,10 +17,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
-public class Frag_UpdateGS extends Fragment {
+public class Frag_EditProfile extends Fragment{
     View rootView;
     ActionBar actionBar;
 
@@ -35,11 +32,9 @@ public class Frag_UpdateGS extends Fragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        rootView = inflater.inflate(R.layout.fragment_updategs, container, false);
-        TextView title = (TextView) rootView.findViewById(R.id.subjTitle);
-
+        rootView = inflater.inflate(R.layout.fragment_new_subject, container, false);
         actionBar = getActivity().getActionBar();
-        actionBar.setTitle((Html.fromHtml("<font color=\"#000000\">Update Grading System</font>")));
+        actionBar.setTitle((Html.fromHtml("<font color=\"#000000\">New Subject</font>")));
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
         getActivity().invalidateOptionsMenu();
 
@@ -58,12 +53,12 @@ public class Frag_UpdateGS extends Fragment {
             case R.id.action_save:
                 new AlertDialog.Builder(getActivity())
                         .setTitle("Confirm")
-                        .setMessage("Are you sure you want to save changes?")
+                        .setMessage("Are you sure you want to save changes to your profile?")
                         .setIcon(android.R.drawable.ic_dialog_alert)
                         .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                             public void onClick(DialogInterface dialog, int whichButton) {
-                                Toast.makeText(getActivity(), "Grading System Updated!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getActivity(), "Successfully saved changes!", Toast.LENGTH_SHORT).show();
                                 getFragmentManager().popBackStackImmediate();
                             }})
                         .setNegativeButton(android.R.string.no, null).show();
@@ -79,4 +74,7 @@ public class Frag_UpdateGS extends Fragment {
         menu.findItem(R.id.action_save).setVisible(true);
         super.onPrepareOptionsMenu(menu);
     }
+
 }
+
+

@@ -10,21 +10,31 @@ import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.GridView;
-import android.widget.ListView;
 
 public class Frag_Subject extends Fragment {
     ActionBar actionBar;
     View rootview;
+
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setHasOptionsMenu(true);
+    }
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         rootview = inflater.inflate(R.layout.fragment_subjects, container, false);
         actionBar = getActivity().getActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
+        getActivity().invalidateOptionsMenu();
 
         Resources res = getResources();
         final String[] colors = {
@@ -69,5 +79,34 @@ public class Frag_Subject extends Fragment {
         });
 
         return rootview;
+    }
+
+    @Override
+    public void onCreateOptionsMenu(Menu menu, MenuInflater inflater) {
+        getActivity().getMenuInflater().inflate(R.menu.menu_add, menu);
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Handle action bar actions click
+            case R.id.action_add:
+                Frag_NewSubject newsubj = new Frag_NewSubject();
+                FragmentManager fm = getFragmentManager();
+                FragmentTransaction ft = fm.beginTransaction();
+                ft.replace(R.id.frame_container, newsubj);
+                ft.addToBackStack(null);
+                ft.commit();
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public void onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.action_add).setVisible(true);
+        super.onPrepareOptionsMenu(menu);
     }
 }

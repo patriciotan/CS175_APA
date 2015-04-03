@@ -10,7 +10,9 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:weightSum="11">
 
         <RelativeLayout
             android:id="@+id/color"
@@ -18,7 +20,8 @@
             android:layout_height="140dp"
             android:background="@drawable/circle"
             android:layout_gravity="center"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:layout_weight="3">
 
             <TextView
                 android:id="@+id/letter"
@@ -33,91 +36,103 @@
         </RelativeLayout>
 
         <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <TextView
             android:id="@+id/name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="15dp"
             android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Grading System"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_weight="1"/>
 
-        <ImageView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/lineColor"
             android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:src="@drawable/divider"/>
+            android:layout_height="3dp"
+            android:background="@drawable/rectangle"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+        </RelativeLayout>
 
-        <LinearLayout
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:weightSum="2"
-            android:padding="15dp"
-            android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
+        <TableLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="3">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Raw Score"
-                    android:padding="10dp"
                     android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="     "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="95"
+                    android:textAppearance="?android:attr/textAppearanceLarge"/>
+
+            </TableRow>
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:padding="10dp">
 
                 <TextView
                     android:layout_width="fill_parent"
                     android:layout_height="wrap_content"
                     android:text="Total Score"
-                    android:padding="10dp"
                     android:gravity="right"
-                    android:textAppearance="?android:attr/textAppearanceMedium"/>
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="fill_parent"
-                android:layout_weight="1"
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="   95"
-                    android:padding="5dp"
-                    android:layout_weight="1"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="  100"
-                    android:padding="5dp"
-                    android:layout_weight="1"
+                    android:text="     "/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="100"
                     android:textAppearance="?android:attr/textAppearanceLarge"/>
 
-            </LinearLayout>
+            </TableRow>
 
-        </LinearLayout>
-
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:src="@drawable/divider"/>
-
-        <Button
-            android:id="@+id/edit"
-            android:layout_width="fill_parent"
-            android:layout_height="wrap_content"
-            android:text="Edit"
-            android:textAllCaps="true"
-            android:background="@drawable/log_in"
-            android:layout_marginTop="20dp"/>
-        <!--android:clickable="true"-->
-        <!--android:onClick="updateClick"/>-->
+        </TableLayout>
 
     </LinearLayout>
 </ScrollView>

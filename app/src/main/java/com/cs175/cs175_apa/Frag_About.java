@@ -28,10 +28,10 @@ public class Frag_About extends Fragment {
         actionBar = getActivity().getActionBar();
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
 
-        TextView irvin = (TextView) rootView.findViewById(R.id.irvinpic);
-        TextView sean = (TextView) rootView.findViewById(R.id.seanpic);
-        ImageView irvPic = (ImageView) rootView.findViewById(R.id.irvin);
-        ImageView seanPic = (ImageView) rootView.findViewById(R.id.sean);
+        TextView irvin = (TextView) rootView.findViewById(R.id.irvin);
+        TextView sean = (TextView) rootView.findViewById(R.id.sean);
+        ImageView irvPic = (ImageView) rootView.findViewById(R.id.irvinpic);
+        ImageView seanPic = (ImageView) rootView.findViewById(R.id.seanpic);
 
         irvin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +49,7 @@ public class Frag_About extends Fragment {
         sean.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] mailList = {"iabellanosa@gmail.com"};
+                String[] mailList = {"xanpatan@gmail.com"};
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, mailList);
                 emailIntent.setType("plain/text");
@@ -75,7 +75,7 @@ public class Frag_About extends Fragment {
         seanPic.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String[] mailList = {"iabellanosa@gmail.com"};
+                String[] mailList = {"xanpatan@gmail.com"};
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, mailList);
                 emailIntent.setType("plain/text");

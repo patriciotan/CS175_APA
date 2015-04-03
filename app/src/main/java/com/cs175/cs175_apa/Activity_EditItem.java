@@ -12,6 +12,8 @@ import android.graphics.PorterDuff;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.DatePicker;
@@ -32,6 +34,8 @@ public class Activity_EditItem extends Activity{
     private int year;
     private int month;
     private int day;
+    EditText raw;
+    EditText total;
 
     static final int DATE_DIALOG_ID = 999;
 
@@ -53,14 +57,14 @@ public class Activity_EditItem extends Activity{
         final RelativeLayout colors = (RelativeLayout) findViewById(R.id.subjColor);
         final TextView letters = (TextView) findViewById(R.id.subjLetter);
         final TextView names = (TextView) findViewById(R.id.subjTitle);
-        final EditText raw = (EditText) findViewById(R.id.rawScore);
-        final EditText total = (EditText) findViewById(R.id.totalScore);
+
+        raw = (EditText) findViewById(R.id.rawScore);
+        total = (EditText) findViewById(R.id.totalScore);
 
         colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         letters.setText(letter);
         names.setText(name);
 
-        Button save = (Button) findViewById(R.id.save);
         date = (Button) findViewById(R.id.dateScore);
 
         date.setOnClickListener(new View.OnClickListener() {
@@ -71,10 +75,19 @@ public class Activity_EditItem extends Activity{
 //                newFragment.show(getFragmentManager(), "DatePicker");
             }
         });
+    }
 
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_save, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Handle action bar actions click
+            case R.id.action_save:
                 if(raw.getText().toString().equals("") || total.getText().toString().equals(""))
                     Toast.makeText(getApplicationContext(), "Input Raw Score and Total Score!", Toast.LENGTH_LONG).show();
                 else {
@@ -88,7 +101,7 @@ public class Activity_EditItem extends Activity{
                                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                                     public void onClick(DialogInterface dialog, int whichButton) {
-                                        Toast.makeText(Activity_EditItem.this, "Successfully added item!", Toast.LENGTH_SHORT).show();
+                                        Toast.makeText(Activity_EditItem.this, "Successfully saved changes!", Toast.LENGTH_SHORT).show();
                                         finish();
                                     }
                                 })
@@ -97,8 +110,17 @@ public class Activity_EditItem extends Activity{
                         Toast.makeText(getApplicationContext(), "Raw Score must not exceed Total Score!", Toast.LENGTH_LONG).show();
                     }
                 }
-            }
-        });
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.action_save).setVisible(true);
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override

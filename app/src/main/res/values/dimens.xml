@@ -5,7 +5,7 @@
     <dimen name="font_size">10sp</dimen>
     <dimen name="form_width">250dp</dimen>
     <dimen name="form_height">35dp</dimen>
-    <dimen name="form_textSize">13sp</dimen>
+    <dimen name="form_textSize">16sp</dimen>
     <dimen name="form_mTop">2dp</dimen>
     <dimen name="label_mTop">5dp</dimen>
     <dimen name="button_mTop">20dp</dimen>

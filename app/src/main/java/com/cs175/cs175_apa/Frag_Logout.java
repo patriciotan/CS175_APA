@@ -22,7 +22,7 @@ public class Frag_Logout extends Fragment {
                 .setPositiveButton(android.R.string.yes, new DialogInterface.OnClickListener() {
 
                     public void onClick(DialogInterface dialog, int whichButton) {
-                        Intent intent = new Intent(getActivity(), Login.class);
+                        Intent intent = new Intent(getActivity(), Activity_Login.class);
                         getActivity().startActivity(intent);
                         getActivity().finish();
                     }})

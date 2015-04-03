@@ -10,7 +10,9 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:weightSum="13">
 
         <RelativeLayout
             android:id="@+id/subjColor"
@@ -18,7 +20,8 @@
             android:layout_height="140dp"
             android:background="@drawable/circle"
             android:layout_gravity="center"
-            android:padding="15dp">
+            android:padding="15dp"
+            android:layout_weight="3">
 
             <TextView
                 android:id="@+id/subjLetter"
@@ -32,49 +35,88 @@
 
         </RelativeLayout>
 
-            <TextView
-                android:id="@+id/subjTitle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:layout_gravity="center_horizontal"
-                android:text="Large Text"
-                android:textAppearance="?android:attr/textAppearanceLarge" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
 
-            <TextView
-                android:id="@+id/subjDesc"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:padding="15dp"
-                android:layout_gravity="center_horizontal"
-                android:text="TextView" />
+        <TextView
+            android:id="@+id/subjTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:text="Large Text"
+            android:layout_weight="1"/>
 
-            <ImageView
-                android:layout_width="fill_parent"
-                android:layout_height="20dp"
-                android:src="@drawable/divider"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:id="@+id/subjDesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="TextView"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/lineColor"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/rectangle"
+            android:layout_gravity="center"
+            android:layout_weight="1">
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
 
         <Button
-                android:id="@+id/Grading"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Grading System"
-                android:textAllCaps="true"
-                android:background="@drawable/log_in"
-                android:layout_marginTop="25dp"
-                android:clickable="true"
-                android:onClick="gradingClick"/>
+            android:id="@+id/Grading"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Grading System"
+            android:textAllCaps="true"
+            android:background="@drawable/log_in"
+            android:clickable="true"
+            android:onClick="gradingClick"
+            android:layout_weight="1"/>
 
-            <Button
-                android:id="@+id/Items"
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:text="Items"
-                android:textAllCaps="true"
-                android:background="@drawable/green_button"
-                android:layout_marginTop="15dp"
-                android:clickable="true"
-                android:onClick="itemsClick"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:layout_weight="1"/>
+
+        <Button
+            android:id="@+id/Items"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Items"
+            android:textAllCaps="true"
+            android:background="@drawable/green_button"
+            android:clickable="true"
+            android:onClick="itemsClick"
+            android:layout_weight="1"/>
 
     </LinearLayout>
 </ScrollView>

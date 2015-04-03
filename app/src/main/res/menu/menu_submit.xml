@@ -3,8 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools" tools:context=".MainActivity">
 
     <item
-        android:id="@+id/action"
-        android:title="@string/action_settings"
+        android:id="@+id/action_submit"
+        android:title="@string/submit_action"
         android:showAsAction="always"/>
 
 </menu>

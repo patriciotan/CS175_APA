@@ -10,24 +10,13 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
-
-        <RelativeLayout
-            android:id="@+id/subjColor"
-            android:layout_width="fill_parent"
-            android:layout_height="10dp"
-            android:background="@drawable/rectangle"
-            android:layout_gravity="center"
-            android:padding="15dp">
-
-        </RelativeLayout>
+        android:orientation="vertical"
+        android:layout_gravity="center">
 
         <TextView
             android:id="@+id/subjTitle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:text="Large Text"/>
 
@@ -35,31 +24,54 @@
             android:id="@+id/subjDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:paddingTop="5dp"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="TextView" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
+
+        <RelativeLayout
+            android:id="@+id/subjColor"
+            android:layout_width="fill_parent"
+            android:layout_height="3dp"
+            android:background="@drawable/rectangle"
+            android:layout_gravity="center">
+
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/subjDesc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
             android:layout_gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceSmall"
             android:text="TextView" />
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:src="@drawable/divider"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center"
             android:textAppearance="?android:attr/textAppearanceSmall"
-            android:text="@string/lorem"
-            android:layout_marginTop="25dp"/>
+            android:text="@string/lorem"/>
 
     </LinearLayout>
 </ScrollView>

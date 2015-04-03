@@ -35,11 +35,13 @@ public class Frag_SubjectView extends Fragment{
         actionBar.setBackgroundDrawable(new ColorDrawable(Color.rgb(190, 235, 193)));
 
         final RelativeLayout colors = (RelativeLayout) rootView.findViewById(R.id.subjColor);
+        final RelativeLayout lcolors = (RelativeLayout) rootView.findViewById(R.id.lineColor);
         final TextView letters = (TextView) rootView.findViewById(R.id.subjLetter);
         final TextView titles = (TextView) rootView.findViewById(R.id.subjTitle);
         final TextView descs = (TextView) rootView.findViewById(R.id.subjDesc);
 
         colors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
+        lcolors.getBackground().setColorFilter(Color.parseColor(color), PorterDuff.Mode.SRC_ATOP);
         letters.setText(letter);
         titles.setText(title);
         descs.setText(desc);

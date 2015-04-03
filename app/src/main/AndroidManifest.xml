@@ -8,7 +8,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name=".Splash"
+            android:name=".Activity_Splash"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -17,15 +17,15 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".MainActivity"
+            android:name=".Activity_Main"
             android:label="@string/app_name" >
         </activity>
         <activity
-            android:name=".Login"
+            android:name=".Activity_Login"
             android:label="@string/title_activity_login" >
         </activity>
         <activity
-            android:name=".Register"
+            android:name=".Activity_Register"
             android:label="@string/title_activity_register" >
         </activity>
         <activity
@@ -35,6 +35,10 @@
         <activity
             android:name=".Activity_EditItem"
             android:label="@string/title_activity_activity__edit_item" >
+        </activity>
+        <activity
+            android:name=".Activity_EditProfile"
+            android:label="@string/title_activity_activity__edit_profile" >
         </activity>
     </application>
 

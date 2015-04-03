@@ -11,6 +11,8 @@ import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.Html;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -31,6 +33,8 @@ public class Activity_NewItem extends Activity{
     private int year;
     private int month;
     private int day;
+    EditText raw;
+    EditText total;
 
     static final int DATE_DIALOG_ID = 999;
 
@@ -49,8 +53,8 @@ public class Activity_NewItem extends Activity{
             String value = extras.getString("new_variable_name");
         }
 
-        final EditText raw = (EditText) findViewById(R.id.rawScore);
-        final EditText total = (EditText) findViewById(R.id.totalScore);
+        raw = (EditText) findViewById(R.id.rawScore);
+        total = (EditText) findViewById(R.id.totalScore);
 
         Spinner spinner = (Spinner) findViewById(R.id.spinner);
     // Create an ArrayAdapter using the string array and a default spinner layout
@@ -61,7 +65,6 @@ public class Activity_NewItem extends Activity{
     // Apply the adapter to the spinner
         spinner.setAdapter(adapter);
 
-        Button save = (Button) findViewById(R.id.save);
         date = (Button) findViewById(R.id.dateScore);
 
         date.setOnClickListener(new View.OnClickListener() {
@@ -72,10 +75,19 @@ public class Activity_NewItem extends Activity{
 //                newFragment.show(getFragmentManager(), "DatePicker");
             }
         });
+    }
 
-        save.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_submit, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            // Handle action bar actions click
+            case R.id.action_submit:
                 if(raw.getText().toString().equals("") || total.getText().toString().equals(""))
                     Toast.makeText(getApplicationContext(), "Input Raw Score and Total Score!", Toast.LENGTH_LONG).show();
                 else {
@@ -98,8 +110,17 @@ public class Activity_NewItem extends Activity{
                         Toast.makeText(getApplicationContext(), "Raw Score must not exceed Total Score!", Toast.LENGTH_LONG).show();
                     }
                 }
-            }
-        });
+
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+        menu.findItem(R.id.action_submit).setVisible(true);
+        return super.onPrepareOptionsMenu(menu);
     }
 
     @Override

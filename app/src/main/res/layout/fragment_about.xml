@@ -10,7 +10,9 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:weightSum="14">
 
         <ImageView
             android:layout_width="140dp"
@@ -19,46 +21,72 @@
             android:src="@drawable/apa"
             android:layout_gravity="center_horizontal"/>
 
-        <ImageView
-            android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:src="@drawable/divider"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
 
         <TextView
             android:id="@+id/about"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="@string/about"
-            android:padding="5dp"
-            android:textAppearance="?android:attr/textAppearanceSmall" />
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:text="@string/about" />
 
-        <ImageView
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
+
+        <View
             android:layout_width="fill_parent"
-            android:layout_height="20dp"
-            android:src="@drawable/divider"/>
+            android:layout_height="3dp"
+            android:background="@color/req_green"
+            android:paddingLeft="5dp"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Developers"
+            android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_gravity="center_horizontal"
-            android:textAppearance="?android:attr/textAppearanceLarge" />
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
 
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:padding="10dp"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_weight="1" >
 
             <ImageView
-                android:id="@+id/irvin"
+                android:id="@+id/irvinpic"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/irvin"/>
 
             <TextView
-                android:id="@+id/irvinpic"
+                android:id="@+id/irvin"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/irvin"
@@ -68,20 +96,29 @@
 
         </LinearLayout>
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="1"/>
+
         <LinearLayout
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
-            android:layout_gravity="center_horizontal">
+            android:layout_gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:layout_weight="1">
 
             <ImageView
-                android:id="@+id/sean"
+                android:id="@+id/seanpic"
                 android:layout_width="50dp"
                 android:layout_height="50dp"
                 android:src="@drawable/sean"/>
 
             <TextView
-                android:id="@+id/seanpic"
+                android:id="@+id/sean"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/sean"

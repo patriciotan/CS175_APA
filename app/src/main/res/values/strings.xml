@@ -4,7 +4,11 @@
     <string name="app_name">APA</string>
     <string name="drawer_open">Slider Menu Opened</string>
     <string name="drawer_close">Slider Menu Closed</string>
-    <string name="action_example">Add Subject</string>
+    <string name="add_action">Add</string>
+    <string name="update_action">Update</string>
+    <string name="edit_action">Edit</string>
+    <string name="save_action">Save</string>
+    <string name="submit_action">Submit</string>
     <string name="app_fname">Academic Performance Assistant</string>
     <string name="menu_subj">Subjects</string>
     <string name="menu_ins">Instruction</string>
@@ -20,8 +24,8 @@
     <string name="title_activity_subject_view">SubjectView</string>
     <string name="irvin">Irvin Edison Abellanosa</string>
     <string name="sean">Sean Patrick Tan</string>
-    <string name="about">        Academic Performance Assistant is an Android application which helps both the instructors and their students to keep track of course subjects, grades in items such as quizzes, assignments, and seatworks. APA automatically calculates the current grades using the grading system inputted by the course instructor. APA also supports a news feed containing announcements for various subjects.</string>
-    <string name="lorem">        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</string>
+    <string name="about">        Academic Performance Assistant is an Android application which helps both the instructors and their students to keep track of course subjects, grades in items such as quizzes, assignments, and seatworks.</string>
+    <string name="lorem">        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</string>
     <string name="cs">CS</string>
     <string name="it">IT</string>
     <string name="ict">ICT</string>
@@ -136,5 +140,6 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_activity__new_item">Activity_NewItem</string>
     <string name="title_activity_activity__edit_item">Activity_EditItem</string>
+    <string name="title_activity_activity__edit_profile">Activity_EditProfile</string>
 
 </resources>

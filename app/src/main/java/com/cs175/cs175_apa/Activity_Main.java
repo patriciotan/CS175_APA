@@ -5,7 +5,6 @@ import java.util.ArrayList;
 import android.app.Activity;
 import android.app.Fragment;
 import android.app.FragmentManager;
-import android.app.FragmentTransaction;
 import android.content.pm.ActivityInfo;
 import android.content.res.Configuration;
 import android.content.res.TypedArray;
@@ -21,8 +20,9 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
-public class MainActivity extends Activity {
+public class Activity_Main extends Activity {
     private DrawerLayout mDrawerLayout;
     private ListView mDrawerList;
     private ActionBarDrawerToggle mDrawerToggle;
@@ -128,7 +128,7 @@ public class MainActivity extends Activity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.new_subj, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
     }
 
@@ -140,26 +140,21 @@ public class MainActivity extends Activity {
         }
         switch (item.getItemId()) {
             // Handle action bar actions click
-            case R.id.action_settings:
-                FragmentManager fm = getFragmentManager();
-                FragmentTransaction ft = fm.beginTransaction();
-                ft.replace(R.id.frame_container, new Frag_NewSubject());
-                ft.addToBackStack(null);
-                ft.commit();
+            case R.id.action:
                 return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
     }
 
-    /***
-     * Called when invalidateOptionsMenu() is triggered
-     */
+//    /***
+//     * Called when invalidateOptionsMenu() is triggered
+//     */
     @Override
     public boolean onPrepareOptionsMenu(Menu menu) {
         // if nav drawer is opened, hide the action items
         boolean drawerOpen = mDrawerLayout.isDrawerOpen(mDrawerList);
-        menu.findItem(R.id.action_settings).setVisible(!drawerOpen);
+        menu.findItem(R.id.action).setVisible(false);
         return super.onPrepareOptionsMenu(menu);
     }
 
@@ -167,7 +162,7 @@ public class MainActivity extends Activity {
      * Diplaying fragment view for selected nav drawer list item
      * */
     private void displayView(int position) {
-        // update the new_subj content by replacing fragments
+        // update the menu_add content by replacing fragments
         Fragment fragment = null;
         switch (position) {
             case 0:

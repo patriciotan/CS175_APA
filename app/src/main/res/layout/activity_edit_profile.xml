@@ -10,17 +10,26 @@
         android:paddingLeft="@dimen/activity_horizontal_margin"
         android:paddingRight="@dimen/activity_horizontal_margin"
         android:paddingTop="@dimen/activity_vertical_margin"
-        android:orientation="vertical"
         android:layout_gravity="center"
-        android:weightSum="9">
+        android:orientation="vertical"
+        android:weightSum="11.5">
 
-        <TextView
-            android:id="@+id/AddNew"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        <ImageView
+            android:id="@+id/userpic"
+            android:layout_width="150dp"
+            android:layout_height="fill_parent"
+            android:src="@drawable/patstar"
             android:layout_gravity="center_horizontal"
-            android:text="Update Grading system"
-            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_weight="3"/>
+
+        <Button
+            android:id="@+id/upload"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:text="Choose photo"
+            android:background="@drawable/log_in"
+            android:clickable="true"
+            android:layout_gravity="center_horizontal"
             android:layout_weight="1" />
 
         <TextView
@@ -31,11 +40,11 @@
             android:layout_weight="1"/>
 
         <EditText
-            android:id="@+id/swper"
+            android:id="@+id/name"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/form_height"
-            android:hint="Seatworks %"
-            android:inputType="number"
+            android:hint="Complete Name"
+            android:inputType="textPersonName"
             android:textSize="@dimen/form_textSize"
             android:layout_weight="1"
             android:background="@drawable/green_button" />
@@ -48,31 +57,14 @@
             android:layout_weight="1"/>
 
         <EditText
-            android:id="@+id/quper"
+            android:id="@+id/pass"
             android:layout_width="fill_parent"
             android:layout_height="@dimen/form_height"
-            android:hint="Quizzes %"
-            android:inputType="number"
-            android:textSize="@dimen/form_textSize"
+            android:hint="New Password"
+            android:inputType="textPassword"
             android:layout_weight="1"
-            android:background="@drawable/green_button" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text=""
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:layout_weight="1"/>
-
-        <EditText
-            android:id="@+id/asper"
-            android:layout_width="fill_parent"
-            android:layout_height="@dimen/form_height"
-            android:hint="Assignments %"
-            android:inputType="number"
             android:textSize="@dimen/form_textSize"
-            android:layout_weight="1"
-            android:background="@drawable/green_button" />
+            android:background="@drawable/green_button"/>
 
     </LinearLayout>
 </ScrollView>

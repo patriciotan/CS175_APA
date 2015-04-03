@@ -8,7 +8,7 @@ import android.os.Bundle;
 import android.os.Handler;
 
 
-public class Splash extends Activity {
+public class Activity_Splash extends Activity {
 
     private static int SPLASH_TIME_OUT = 1500;
     ActionBar actionBar;
@@ -25,7 +25,7 @@ public class Splash extends Activity {
 
             @Override
             public void run() {
-                Intent i = new Intent(Splash.this, Login.class);
+                Intent i = new Intent(Activity_Splash.this, Activity_Login.class);
                 startActivity(i);
 
                 finish();

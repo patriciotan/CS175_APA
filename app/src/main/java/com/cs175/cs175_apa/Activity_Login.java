@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 
 
-public class Login extends Activity {
+public class Activity_Login extends Activity {
 
     EditText user, pass;
     ActionBar actionBar;
@@ -30,7 +30,7 @@ public class Login extends Activity {
 //		Toast.makeText(this, username, Toast.LENGTH_SHORT);
 //        if(username.toString().equals("asdf"))
 //        {
-        Intent intent = new Intent(Login.this,MainActivity.class);
+        Intent intent = new Intent(Activity_Login.this,Activity_Main.class);
         startActivity(intent);
 //        }else
 //        {
@@ -40,7 +40,7 @@ public class Login extends Activity {
     }
 
     public void registerClick(View v){
-        Intent intent = new Intent(Login.this,Register.class);
+        Intent intent = new Intent(Activity_Login.this,Activity_Register.class);
         startActivity(intent);
     }
 }
